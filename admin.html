@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Quản ly & Nhân viên</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <!--Chiếc hộp bao toàn bộ giao diện-->
+    <div class="dashboard-wrapper"> 
+
+        <!--Thanh menu-->
+        <aside class="sidebar">
+            <div class="sidebar__logo">
+                <h2>TipManager</h2>
+            </div>
+            <!--Khu vực điều hướng-->
+            <nav class="sidebar__nav">
+                <ul>
+                    <li class="active"><a href="#overview">📊 Tổng quan</a></li>
+                    <li><a href="#employees">👥 Nhân viên</a></li>
+                    <li><a href="#reviews">⭐ Đánh giá dịch vụ</a></li>
+                    <li><a href="#settings">⚙️ Cài đặt</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar__logout">
+                <button class="btn-logout">Đăng xuất</button>
+            </div>
+        </aside>
+
+        <!--Nội dung chính-->
+        <main class="main-content">
+            
+            <!--Đầu trang-->
+            <header class="top-header">
+                <!--Thanh tìm kiếm-->
+                <div class="top-header__search">
+                    <input type="text" placeholder="Tìm kiếm nhân viên, đánh giá...">
+                </div>
+
+                <!--Hồ sơ người dùng-->
+                <div>
+                    <span class="profile-name">Trần Văn Thái (Chủ cửa hàng)</span>
+                    <div class="profile-avata">T</div>
+                </div>
+            </header>
+
+            <!--Thân trang-->
+            <div class="content-body">
+                <!--Thông tin tổng quát-->
+                <section class="stat-cards" id="overview">
+                    <!--Ô doanh thu-->
+                    <div class="card card--revenue">
+                        <h3 class="card card__title">Tổng Doanh Thu</h3>
+                        <p class="card card__value">500.000.000 đ</p>
+                    </div>
+                    <!--Ô tiền tip-->
+                    <div class="card card--tip">
+                        <h3 class="card card__title">Tổng Tiền Tip</h3>
+                        <p class="card card__value">1.250.000 đ</p>
+                    </div>
+                    <!--Ô điểm đánh giá tb-->
+                    <div class="card card--rating">
+                        <h3 class="card card__title">Trung bình đánh giá</h3>
+                        <p class="card card__value">4.8 / 5.0 ⭐</p>
+                    </div>
+                </section>
+                <!--Thông tin chi tiết-->
+                <section class="data-section" id="employees">
+                    <div class="data-section__header">
+                        <h2>Danh sách nhân viên</h2>
+                        <button class="btn btn--primary" id="btnOpenAddEmployee">+ Thêm nhân viên</button>
+                    </div>
+                    <!--Bảng thông tin chi tiết nvien-->
+                    <div class="table-responsive">
+                        <table class="employee-table">
+                            <thead>
+                                <tr>
+                                    <th>Mã NV</th>
+                                    <th>Họ và Tên</th>
+                                    <th>Tổng Tip Nhận</th>
+                                    <th>Điểm Đánh Giá</th>
+                                    <th>Trạng Thái</th>
+                                    <th>Thao Tác</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>NV1</td>
+                                    <td>Lê Quang Dương</td>
+                                    <td>500.000 đ</td>
+                                    <td>4.7 ⭐</td>
+                                    <td><span class="badge badge--success">Đang làm việc</span></td>
+                                    <td><button class="btn-action">Chỉnh sửa</button></td>
+                                </tr>
+                                <tr>
+                                    <td>NV2</td>
+                                    <td>Đặng Nguyễn Đức Anh</td>
+                                    <td>250.000 đ</td>
+                                    <td>4.9 ⭐</td>
+                                    <td><span class="badge badge--danger">Nghỉ phép</span></td>
+                                    <td><button class="btn-action">Chỉnh sửa</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="pagination">
+                        <button class="page-btn">Trước</button>
+                        <span class="page-current">Trang 1 / 3</span>
+                        <button class="page-btn">Sau</button>
+                    </div>
+                </section>
+                <!--Rating-->
+                <section class="review-section" id="reviews">
+                        <h2>Đánh giá mới nhất từ khách hàng</h2>
+                        <div class="review-list">
+                            <div class="review-card">
+                                <div class="review-card__header">
+                                    <span class="stars">⭐⭐⭐⭐⭐</span>
+                                    <span class="date">14/03/2026</span>
+                                </div>
+                                <p class="review-card__content">"Nhân viên phục vụ nhiệt tình, đồ ăn ngon. Sẽ quay lại!"</p>
+                                <p class="review-card__employee">Nhân viên phục vụ: <strong>Đặng Nguyễn Đức Anh</strong></p>
+                            </div>
+
+                            <div class="review-card">
+                                <div class="review-card__header">
+                                    <span class="stars">⭐⭐⭐⭐</span>
+                                    <span class="date">13/03/2026</span>
+                                </div>
+                                <p class="review-card__content">"Không gian quán đẹp, đồ ăn ra hơi chậm!"</p>
+                                <p class="review-card__employee">Nhân viên phục vụ: <strong>Lê Quang Dương</strong></p>
+                            </div>
+                        </div>
+                </section>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
