@@ -152,5 +152,105 @@ body{
     color: #313131;
 }
 /*Bảng dữ liệu*/
+.data-section, .review-section{
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgb(0, 0, 0, 0.03);
+    margin-bottom: 30px;
+}
+.data-section__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+.btn--primary{
+    background-color: #2e3ce4;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    box-shadow: 0 4px 15px rgb(46, 60, 228, 0.3);
+}
+.employee-table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.employee-table th{
+    background-color: #f8f9fa;
+    color: #455a64;
+    padding: 15px;
+    text-align: left;
+    font-size: 13px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #edf1f5;
+}
+.employee-table td{
+    padding: 18px 15px;
+    border-bottom: 1px solid #edf1f5;
+    color: #67757c;
+}
+.badge{
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+.badge--success{
+    background-color: #d1fae5;
+    color: #065f46;
+}
+.badge--danger{
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+.btn-action{
+    background: none;
+    border: none;
+    color: #2e3ce4;
+    cursor: pointer;
+    font-weight: 500;
+    text-decoration: underline;
+}
+.pagination{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 20px;
+    gap: 15px;
+}
+.page-btn{
+    padding: 8px 15px;
+    border: 1px solid #edf1f5;
+    background-color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.page-btn:hover{
+    background-color: #f3f6f9;
+}
+.page-current{
+    font-weight: 500;
+    font-size: 14px;
+}
 /*Đánh giá*/
-
+.review-card{
+    border: 1px solid #edf1f5;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 20px;
+    background-color: #fafbfc;
+}
+.review-card__header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+.review-card__content{
+    font-style: italic;
+    color: #455a64;
+    margin-bottom: 10px;
+}
